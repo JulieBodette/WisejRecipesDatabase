@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
 using Wisej.Web;
 
 namespace RecipeDatabase
@@ -19,6 +20,14 @@ namespace RecipeDatabase
             dataGridView1.DataSource = menuitems;
             foodgroups = db.GetFoodGroups();
             dataGridView2.DataSource = foodgroups;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, System.EventArgs e)
+        {
+            Point ca = dataGridView1.CurrentCellAddress;
+            AlertBox.Show(dataGridView1.CurrentCellAddress.ToString());
+            AlertBox.Show(dataGridView1.CurrentRow.ToString());
+            AlertBox.Show(dataGridView1.GetValue(ca).ToString());
         }
     }
 }

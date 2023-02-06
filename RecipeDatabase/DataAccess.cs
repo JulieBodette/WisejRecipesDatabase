@@ -24,5 +24,7 @@ namespace RecipeDatabase
                 return output;
             }
         }
+        //write more functions here with more queries
+        //I think they have to return a List<MenuItem> or a List<FoodGroup>??
     }
 }
