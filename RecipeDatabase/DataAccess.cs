@@ -15,5 +15,14 @@ namespace RecipeDatabase
                 return output;
             }
         }
+
+        public List<FoodGroup> GetFoodGroups()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
+            {
+                var output = connection.Query<FoodGroup>("select * from Food_Group").ToList();
+                return output;
+            }
+        }
     }
 }
