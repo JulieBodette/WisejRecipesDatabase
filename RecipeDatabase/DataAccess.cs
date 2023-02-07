@@ -11,7 +11,10 @@ namespace RecipeDatabase
         {
             using(IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
             {
-                var output = connection.Query<MenuItem>("select * from Menu_Items").ToList();
+                //using SQL query sent in by text
+                //var output = connection.Query<MenuItem>("select * from Menu_Items").ToList();
+                //using stored procedure
+                var output = connection.Query<MenuItem>("dbo.GetAllMenuItem").ToList();
                 return output;
             }
         }
@@ -20,7 +23,10 @@ namespace RecipeDatabase
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
             {
-                var output = connection.Query<FoodGroup>("select * from Food_Group").ToList();
+                //using SQL query sent in by text
+                //var output = connection.Query<FoodGroup>("select * from Food_Group").ToList();
+                //using stored procedure
+                var output = connection.Query<FoodGroup>("dbo.GetAllFoodGroup").ToList();
                 return output;
             }
         }
