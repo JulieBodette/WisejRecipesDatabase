@@ -49,5 +49,15 @@ namespace RecipeDatabase
             dataGridView1.DataSource = menuitems;
             //slightly awkward- you have to select the specific cell and not just the row
         }
+
+        private void buttonReload_Click(object sender, System.EventArgs e)
+        {
+            //same code as what runs on page load
+            menuitems = db.GetMenuItems();
+            dataGridView1.DataSource = menuitems;
+            foodgroups = db.GetFoodGroups();
+            dataGridView2.DataSource = foodgroups;
+
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.button1 = new Wisej.Web.Button();
             this.label3 = new Wisej.Web.Label();
             this.button2 = new Wisej.Web.Button();
+            this.buttonReload = new Wisej.Web.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -107,10 +108,20 @@
             this.button2.Text = "Filter based on selected row";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // buttonReload
+            // 
+            this.buttonReload.Location = new System.Drawing.Point(616, 32);
+            this.buttonReload.Name = "buttonReload";
+            this.buttonReload.Size = new System.Drawing.Size(100, 65);
+            this.buttonReload.TabIndex = 9;
+            this.buttonReload.Text = "Reload from Database/ clear filters";
+            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
+            // 
             // Page1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonReload);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -139,6 +150,7 @@
         private Wisej.Web.Button button1;
         private Wisej.Web.Label label3;
         private Wisej.Web.Button button2;
+        private Wisej.Web.Button buttonReload;
     }
 }
 
