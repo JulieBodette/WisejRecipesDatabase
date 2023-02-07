@@ -59,5 +59,27 @@ namespace RecipeDatabase
             dataGridView2.DataSource = foodgroups;
 
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            AlertBox.Show("stopped editing cell");
+            //add code to update the cell value in the database
+            Point ca = dataGridView1.CurrentCellAddress;
+            AlertBox.Show(dataGridView1.GetValue(ca).ToString());
+            //can i get the column of the cell? so i know where to put the data?
+            //also the row
+        }
+
+        private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            AlertBox.Show("stopped editing cell");
+            //add code to update the cell value in the database
+            Point ca = dataGridView2.CurrentCellAddress;
+            Point firstColumn = new Point(0, ca.Y);
+            AlertBox.Show(dataGridView2.GetValue(ca).ToString());
+            //can i get the column of the cell? so i know where to put the data?
+            //also the row
+            db.UpdateFoodGroup(dataGridView2.GetValue(firstColumn).ToString(), dataGridView2.GetValue(ca).ToString());
+        }
     }
 }

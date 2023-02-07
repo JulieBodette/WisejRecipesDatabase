@@ -43,10 +43,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = true;
+            this.dataGridView1.AllowUserToDeleteRows = true;
             this.dataGridView1.Location = new System.Drawing.Point(24, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(569, 309);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellEndEdit += new Wisej.Web.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // label1
@@ -73,6 +76,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(501, 308);
             this.dataGridView2.TabIndex = 4;
+            this.dataGridView2.CellEndEdit += new Wisej.Web.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             // 
             // textBox1
             // 
@@ -131,7 +135,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Page1";
-            this.Size = new System.Drawing.Size(1391, 457);
+            this.Size = new System.Drawing.Size(1269, 430);
             this.Load += new System.EventHandler(this.Page1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
