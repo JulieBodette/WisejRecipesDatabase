@@ -34,6 +34,8 @@
             this.dataGridView2 = new Wisej.Web.DataGridView();
             this.textBox1 = new Wisej.Web.TextBox();
             this.button1 = new Wisej.Web.Button();
+            this.label3 = new Wisej.Web.Label();
+            this.button2 = new Wisej.Web.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -84,13 +86,33 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 30);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
+            this.button1.Text = "Filter";
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(115, 395);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 18);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Enter a food group here";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(883, 402);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(199, 38);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Filter based on selected row";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Page1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
@@ -115,6 +137,8 @@
         private Wisej.Web.DataGridView dataGridView2;
         private Wisej.Web.TextBox textBox1;
         private Wisej.Web.Button button1;
+        private Wisej.Web.Label label3;
+        private Wisej.Web.Button button2;
     }
 }
 

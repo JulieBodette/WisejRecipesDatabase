@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 using System.Drawing;
 using System.Security.Cryptography;
 using Wisej.Web;
@@ -34,10 +35,19 @@ namespace RecipeDatabase
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            //update the datagrid view based on the selected foodgroup
+            //update the datagrid view based on the foodgroup from the textbox
             menuitems = db.GetMenuItemsWithSameFoodGroup(textBox1.Text);
             dataGridView1.DataSource = menuitems;
 
+        }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            //update the datagrid view based on the selected foodgroup
+            Point ca = dataGridView2.CurrentCellAddress;
+            menuitems = db.GetMenuItemsWithSameFoodGroup(dataGridView2.GetValue(ca).ToString());
+            dataGridView1.DataSource = menuitems;
+            //slightly awkward- you have to select the specific cell and not just the row
         }
     }
 }
