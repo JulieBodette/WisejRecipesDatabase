@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Security.Cryptography;
 using Wisej.Web;
 
 namespace RecipeDatabase
@@ -12,10 +13,11 @@ namespace RecipeDatabase
         }
         List<MenuItem> menuitems = new List<MenuItem>();
         List<FoodGroup> foodgroups = new List<FoodGroup>();
+        DataAccess db = new DataAccess();
 
         private void Page1_Load(object sender, System.EventArgs e)
         {
-            DataAccess db = new DataAccess();
+            
             menuitems = db.GetMenuItems();
             dataGridView1.DataSource = menuitems;
             foodgroups = db.GetFoodGroups();
@@ -28,6 +30,14 @@ namespace RecipeDatabase
             AlertBox.Show(dataGridView1.CurrentCellAddress.ToString());
             AlertBox.Show(dataGridView1.CurrentRow.ToString());
             AlertBox.Show(dataGridView1.GetValue(ca).ToString());
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            //update the datagrid view based on the selected foodgroup
+            menuitems = db.GetMenuItemsWithSameFoodGroup(textBox1.Text);
+            dataGridView1.DataSource = menuitems;
+
         }
     }
 }

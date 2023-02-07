@@ -32,6 +32,8 @@
             this.label1 = new Wisej.Web.Label();
             this.label2 = new Wisej.Web.Label();
             this.dataGridView2 = new Wisej.Web.DataGridView();
+            this.textBox1 = new Wisej.Web.TextBox();
+            this.button1 = new Wisej.Web.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -69,16 +71,34 @@
             this.dataGridView2.Size = new System.Drawing.Size(501, 308);
             this.dataGridView2.TabIndex = 4;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(277, 392);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 30);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(456, 392);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Page1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Page1";
-            this.Size = new System.Drawing.Size(1133, 384);
+            this.Size = new System.Drawing.Size(1391, 457);
             this.Load += new System.EventHandler(this.Page1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -93,6 +113,8 @@
         private Wisej.Web.Label label1;
         private Wisej.Web.Label label2;
         private Wisej.Web.DataGridView dataGridView2;
+        private Wisej.Web.TextBox textBox1;
+        private Wisej.Web.Button button1;
     }
 }
 
