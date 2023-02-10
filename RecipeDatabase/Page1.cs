@@ -23,6 +23,7 @@ namespace RecipeDatabase
             dataGridView1.DataSource = menuitems;
             foodgroups = db.GetFoodGroups();
             dataGridView2.DataSource = foodgroups;
+            dataRepeater1.DataSource= foodgroups;
         }
 
         private void dataGridView1_SelectionChanged(object sender, System.EventArgs e)
