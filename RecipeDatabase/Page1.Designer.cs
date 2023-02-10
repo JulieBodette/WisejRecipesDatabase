@@ -38,10 +38,14 @@
 			this.button2 = new Wisej.Web.Button();
 			this.buttonReload = new Wisej.Web.Button();
 			this.dataRepeater1 = new Wisej.Web.DataRepeater();
+			this.label4 = new Wisej.Web.Label();
+			this.pictureBox1 = new Wisej.Web.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataRepeater1)).BeginInit();
+			this.dataRepeater1.ItemTemplate.SuspendLayout();
 			this.dataRepeater1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
@@ -130,12 +134,35 @@
 			// 
 			// dataRepeater1.ItemTemplate
 			// 
+			this.dataRepeater1.ItemTemplate.Controls.Add(this.pictureBox1);
+			this.dataRepeater1.ItemTemplate.Controls.Add(this.label4);
 			this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(462, 100);
+			this.dataRepeater1.ItemTemplate.Layout += new Wisej.Web.LayoutEventHandler(this.dataRepeater1_ItemTemplate_Layout);
 			this.dataRepeater1.Location = new System.Drawing.Point(927, 94);
 			this.dataRepeater1.Name = "dataRepeater1";
 			this.dataRepeater1.Size = new System.Drawing.Size(464, 272);
 			this.dataRepeater1.TabIndex = 10;
 			this.dataRepeater1.Text = "dataRepeater1";
+			this.dataRepeater1.CurrentItemIndexChanged += new System.EventHandler(this.dataRepeater1_CurrentItemIndexChanged);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(255, 39);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(39, 18);
+			this.label4.TabIndex = 0;
+			this.label4.Text = "label4";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BorderStyle = Wisej.Web.BorderStyle.Solid;
+			this.pictureBox1.ImageSource = "https://images.unsplash.com/photo-1556761223-4c4282c73f77?ixlib=rb-4.0.3&ixid=Mnw" +
+    "xMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80";
+			this.pictureBox1.Location = new System.Drawing.Point(71, 0);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+			this.pictureBox1.SizeMode = Wisej.Web.PictureBoxSizeMode.Cover;
 			// 
 			// Page1
 			// 
@@ -152,12 +179,15 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "Page1";
-			this.Size = new System.Drawing.Size(1394, 546);
+			this.Size = new System.Drawing.Size(1299, 529);
 			this.Load += new System.EventHandler(this.Page1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			this.dataRepeater1.ItemTemplate.ResumeLayout(false);
+			this.dataRepeater1.ItemTemplate.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataRepeater1)).EndInit();
 			this.dataRepeater1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -175,6 +205,8 @@
         private Wisej.Web.Button button2;
         private Wisej.Web.Button buttonReload;
 		private Wisej.Web.DataRepeater dataRepeater1;
+		private Wisej.Web.Label label4;
+		private Wisej.Web.PictureBox pictureBox1;
 	}
 }
 

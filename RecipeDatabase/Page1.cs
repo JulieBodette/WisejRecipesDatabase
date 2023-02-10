@@ -82,5 +82,18 @@ namespace RecipeDatabase
             //also the row
             db.UpdateFoodGroup(dataGridView2.GetValue(firstColumn).ToString(), dataGridView2.GetValue(ca).ToString());
         }
-    }
+
+
+		private void dataRepeater1_ItemTemplate_Layout(object sender, LayoutEventArgs e)
+		{
+			//label4.Text = dataRepeater1.DisplayedItems[1].Text;
+			//dataRepeater1.DataSource
+			//label4.Text = dataRepeater1.CurrentItem.Controls("lblName").Text
+		}
+
+		private void dataRepeater1_CurrentItemIndexChanged(object sender, System.EventArgs e)
+		{
+            AlertBox.Show("item index changed");
+		}
+	}
 }
