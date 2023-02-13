@@ -74,20 +74,29 @@ namespace RecipeDatabase
         private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             AlertBox.Show("stopped editing cell");
-            //add code to update the cell value in the database
+            //get the cell address of the currently selected cell- use it to get the value to put in an alertbox
             Point ca = dataGridView2.CurrentCellAddress;
             Point firstColumn = new Point(0, ca.Y);
             AlertBox.Show(dataGridView2.GetValue(ca).ToString());
-            //can i get the column of the cell? so i know where to put the data?
-            //also the row
-            db.UpdateFoodGroup(dataGridView2.GetValue(firstColumn).ToString(), dataGridView2.GetValue(ca).ToString());
-        }
+
+            var selectedRow = this.dataGridView2.SelectedRows[0];
+			var FoodGroupCell = selectedRow.Cells["Food_Group"]; //Here we need to send it the name of the column from the data grid view it "Food_Group"
+			string foodgroup = (string)FoodGroupCell.Value;
+			var IngredientCell = selectedRow.Cells["Main_Ingredients"]; //Main_Ingredients is the name of the column from the database- same as the name of the column in the data grid view. Here we need to send it the name of the column from the data grid view.
+            string ingredient = (string)IngredientCell.Value;
+			var WhenEatenCell = selectedRow.Cells["When_Eaten"];
+			string when = (string)WhenEatenCell.Value;
+			var LinkCell = selectedRow.Cells["Picture_Link"];
+			string link = (string)LinkCell.Value;
+			db.UpdateFoodGroup(foodgroup, ingredient,when, link);
+
+		}
 
 
 		private void dataRepeater1_ItemTemplate_Layout(object sender, LayoutEventArgs e)
 		{
-			//label4.Text = dataRepeater1.DisplayedItems[1].Text;
-			//dataRepeater1.DataSource
+            //label4.Text = dataRepeater1.DisplayedItems[1].Text;
+            //label4.Text = dataRepeater1.DataSource.ToString();
 			//label4.Text = dataRepeater1.CurrentItem.Controls("lblName").Text
 		}
 

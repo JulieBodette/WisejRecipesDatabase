@@ -38,8 +38,8 @@
 			this.button2 = new Wisej.Web.Button();
 			this.buttonReload = new Wisej.Web.Button();
 			this.dataRepeater1 = new Wisej.Web.DataRepeater();
-			this.label4 = new Wisej.Web.Label();
 			this.pictureBox1 = new Wisej.Web.PictureBox();
+			this.label4 = new Wisej.Web.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataRepeater1)).BeginInit();
@@ -145,15 +145,6 @@
 			this.dataRepeater1.Text = "dataRepeater1";
 			this.dataRepeater1.CurrentItemIndexChanged += new System.EventHandler(this.dataRepeater1_CurrentItemIndexChanged);
 			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(255, 39);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(39, 18);
-			this.label4.TabIndex = 0;
-			this.label4.Text = "label4";
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BorderStyle = Wisej.Web.BorderStyle.Solid;
@@ -163,6 +154,15 @@
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 100);
 			this.pictureBox1.SizeMode = Wisej.Web.PictureBoxSizeMode.Cover;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(255, 39);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(39, 18);
+			this.label4.TabIndex = 0;
+			this.label4.Text = "label4";
 			// 
 			// Page1
 			// 
@@ -179,7 +179,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "Page1";
-			this.Size = new System.Drawing.Size(1299, 529);
+			this.Size = new System.Drawing.Size(1383, 430);
 			this.Load += new System.EventHandler(this.Page1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

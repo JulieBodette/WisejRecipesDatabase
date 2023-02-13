@@ -42,12 +42,12 @@ namespace RecipeDatabase
         }
         //write more functions here with more queries
         //I think they have to return a List<MenuItem> or a List<FoodGroup>??
-        public void UpdateFoodGroup(string foodGroup, string whenEaten)
+        public void UpdateFoodGroup(string foodGroup, string ingredient, string wheneaten, string piclink)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
             {
                 //using stored procedure
-                connection.Execute("dbo.UpdateFoodGroup @Food_Group, @When_Eaten", new FoodGroup { Food_Group = foodGroup, When_Eaten = whenEaten });
+                connection.Execute("dbo.UpdateFoodGroup @Food_Group, @Main_Ingredients, @When_Eaten, @Picture_Link", new FoodGroup { Food_Group = foodGroup, Main_Ingredients = ingredient, When_Eaten = wheneaten, Picture_Link = piclink  });
 
             }
         }
