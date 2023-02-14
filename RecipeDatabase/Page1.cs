@@ -6,12 +6,22 @@ using Wisej.Web;
 
 namespace RecipeDatabase
 {
+
     public partial class Page1 : Page
     {
-        public Page1()
+		public Page1()
         {
             InitializeComponent();
-        }
+			//ItemTemplate created
+			var itemTemplate = new ItemTemplateSupport();
+			itemTemplate.Dock = DockStyle.Fill;
+
+			//Add Binding on public Property created on ItemTemplateSupport class
+			itemTemplate.DataBindings.Add(new Binding("FoodGroupName", foodgroups, "Food_Group"));
+
+			//Add item template to dataRepeater
+			dataRepeater1.ItemTemplate.Controls.Add(itemTemplate);
+		}
         List<MenuItem> menuitems = new List<MenuItem>();
         List<FoodGroup> foodgroups = new List<FoodGroup>();
         DataAccess db = new DataAccess();

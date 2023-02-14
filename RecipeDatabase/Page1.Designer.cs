@@ -179,7 +179,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "Page1";
-			this.Size = new System.Drawing.Size(1383, 430);
+			this.Size = new System.Drawing.Size(1408, 447);
 			this.Load += new System.EventHandler(this.Page1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
