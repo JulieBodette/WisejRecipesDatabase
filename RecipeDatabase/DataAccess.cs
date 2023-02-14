@@ -42,6 +42,9 @@ namespace RecipeDatabase
         }
         //write more functions here with more queries
         //I think they have to return a List<MenuItem> or a List<FoodGroup>??
+
+
+        //updates the entire row
         public void UpdateFoodGroup(string foodGroup, string ingredient, string wheneaten, string piclink)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
@@ -51,5 +54,9 @@ namespace RecipeDatabase
 
             }
         }
+
+
+        //updates a single value
+        //add code here
     }
 }
