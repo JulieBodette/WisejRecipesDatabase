@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace RecipeDatabase
 {
@@ -55,7 +56,16 @@ namespace RecipeDatabase
             }
         }
 
+        public void UpdateFoodGroupSingleValue(string foodGroup, string colName, string newValue)
+        {
+			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
+            {
+                //using stored procedure
+                //we send in an anonymous object with the parameter values.
+				connection.Execute("dbo.UpdateFoodGroupOneColumnOnlySingleValuegood @PK_Food_Group, @ColumnName, @NewValue", new { PK_Food_Group = foodGroup, ColumnName = colName, NewValue = newValue });
 
+			}
+		}
         //updates a single value
         //add code here
     }

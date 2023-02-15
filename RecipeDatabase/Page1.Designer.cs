@@ -40,6 +40,7 @@
 			this.dataRepeater1 = new Wisej.Web.DataRepeater();
 			this.pictureBox1 = new Wisej.Web.PictureBox();
 			this.label4 = new Wisej.Web.Label();
+			this.button3 = new Wisej.Web.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataRepeater1)).BeginInit();
@@ -164,10 +165,20 @@
 			this.label4.TabIndex = 0;
 			this.label4.Text = "label4";
 			// 
+			// button3
+			// 
+			this.button3.Location = new System.Drawing.Point(983, 388);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(200, 44);
+			this.button3.TabIndex = 11;
+			this.button3.Text = "update 1 value";
+			this.button3.Click += new System.EventHandler(this.button3_Click);
+			// 
 			// Page1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
+			this.Controls.Add(this.button3);
 			this.Controls.Add(this.dataRepeater1);
 			this.Controls.Add(this.buttonReload);
 			this.Controls.Add(this.button2);
@@ -207,6 +218,7 @@
 		private Wisej.Web.DataRepeater dataRepeater1;
 		private Wisej.Web.Label label4;
 		private Wisej.Web.PictureBox pictureBox1;
+		private Wisej.Web.Button button3;
 	}
 }
 

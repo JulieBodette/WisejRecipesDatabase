@@ -114,5 +114,10 @@ namespace RecipeDatabase
 		{
             AlertBox.Show("item index changed");
 		}
+
+		private void button3_Click(object sender, System.EventArgs e)
+		{
+            db.UpdateFoodGroupSingleValue("Pizza", "Main_Ingredients", "cheese");
+		}
 	}
 }
