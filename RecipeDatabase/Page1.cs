@@ -26,7 +26,9 @@ namespace RecipeDatabase
             foodgroups = db.GetFoodGroups();
             dataGridView2.DataSource = foodgroups;
             dataRepeater1.DataSource= foodgroups;
+            //set up the bindings on the dataRepeater to show text and images
 			this.dataRepeaterLabel.DataBindings.Add("Text", foodgroups, "Food_Group");
+            this.dataRepeaterPicturebox.DataBindings.Add("ImageSource", foodgroups, "Picture_Link");
 		}
 
 		private void dataGridView1_SelectionChanged(object sender, System.EventArgs e)
