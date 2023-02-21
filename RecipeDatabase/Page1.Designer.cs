@@ -161,9 +161,8 @@
 			this.label4.AutoSize = true;
 			this.label4.Location = new System.Drawing.Point(255, 39);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(39, 18);
+			this.label4.Size = new System.Drawing.Size(4, 18);
 			this.label4.TabIndex = 0;
-			this.label4.Text = "label4";
 			// 
 			// button3
 			// 
@@ -190,7 +189,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "Page1";
-			this.Size = new System.Drawing.Size(1408, 447);
+			this.Size = new System.Drawing.Size(1168, 460);
 			this.Load += new System.EventHandler(this.Page1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

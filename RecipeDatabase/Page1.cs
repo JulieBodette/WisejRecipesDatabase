@@ -13,14 +13,7 @@ namespace RecipeDatabase
         {
             InitializeComponent();
 			//ItemTemplate created
-			var itemTemplate = new ItemTemplateSupport();
-			itemTemplate.Dock = DockStyle.Fill;
 
-			//Add Binding on public Property created on ItemTemplateSupport class
-			itemTemplate.DataBindings.Add(new Binding("FoodGroupName", foodgroups, "Food_Group"));
-
-			//Add item template to dataRepeater
-			dataRepeater1.ItemTemplate.Controls.Add(itemTemplate);
 		}
         List<MenuItem> menuitems = new List<MenuItem>();
         List<FoodGroup> foodgroups = new List<FoodGroup>();
@@ -34,9 +27,10 @@ namespace RecipeDatabase
             foodgroups = db.GetFoodGroups();
             dataGridView2.DataSource = foodgroups;
             dataRepeater1.DataSource= foodgroups;
-        }
+			this.label4.DataBindings.Add("Text", foodgroups, "Food_Group");
+		}
 
-        private void dataGridView1_SelectionChanged(object sender, System.EventArgs e)
+		private void dataGridView1_SelectionChanged(object sender, System.EventArgs e)
         {
             Point ca = dataGridView1.CurrentCellAddress;
             AlertBox.Show(dataGridView1.CurrentCellAddress.ToString());
