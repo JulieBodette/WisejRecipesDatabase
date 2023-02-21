@@ -12,7 +12,6 @@ namespace RecipeDatabase
 		public Page1()
         {
             InitializeComponent();
-			//ItemTemplate created
 
 		}
         List<MenuItem> menuitems = new List<MenuItem>();
@@ -27,7 +26,7 @@ namespace RecipeDatabase
             foodgroups = db.GetFoodGroups();
             dataGridView2.DataSource = foodgroups;
             dataRepeater1.DataSource= foodgroups;
-			this.label4.DataBindings.Add("Text", foodgroups, "Food_Group");
+			this.dataRepeaterLabel.DataBindings.Add("Text", foodgroups, "Food_Group");
 		}
 
 		private void dataGridView1_SelectionChanged(object sender, System.EventArgs e)

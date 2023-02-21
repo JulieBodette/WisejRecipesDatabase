@@ -39,7 +39,7 @@
 			this.buttonReload = new Wisej.Web.Button();
 			this.dataRepeater1 = new Wisej.Web.DataRepeater();
 			this.pictureBox1 = new Wisej.Web.PictureBox();
-			this.label4 = new Wisej.Web.Label();
+			this.dataRepeaterLabel = new Wisej.Web.Label();
 			this.button3 = new Wisej.Web.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -136,7 +136,7 @@
 			// dataRepeater1.ItemTemplate
 			// 
 			this.dataRepeater1.ItemTemplate.Controls.Add(this.pictureBox1);
-			this.dataRepeater1.ItemTemplate.Controls.Add(this.label4);
+			this.dataRepeater1.ItemTemplate.Controls.Add(this.dataRepeaterLabel);
 			this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(462, 100);
 			this.dataRepeater1.ItemTemplate.Layout += new Wisej.Web.LayoutEventHandler(this.dataRepeater1_ItemTemplate_Layout);
 			this.dataRepeater1.Location = new System.Drawing.Point(927, 94);
@@ -156,13 +156,15 @@
 			this.pictureBox1.Size = new System.Drawing.Size(100, 100);
 			this.pictureBox1.SizeMode = Wisej.Web.PictureBoxSizeMode.Cover;
 			// 
-			// label4
+			// dataRepeaterLabel
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(255, 39);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(4, 18);
-			this.label4.TabIndex = 0;
+			this.dataRepeaterLabel.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+			this.dataRepeaterLabel.AutoSize = true;
+			this.dataRepeaterLabel.Location = new System.Drawing.Point(255, 39);
+			this.dataRepeaterLabel.Name = "dataRepeaterLabel";
+			this.dataRepeaterLabel.Size = new System.Drawing.Size(4, 18);
+			this.dataRepeaterLabel.TabIndex = 0;
 			// 
 			// button3
 			// 
@@ -215,7 +217,7 @@
         private Wisej.Web.Button button2;
         private Wisej.Web.Button buttonReload;
 		private Wisej.Web.DataRepeater dataRepeater1;
-		private Wisej.Web.Label label4;
+		private Wisej.Web.Label dataRepeaterLabel;
 		private Wisej.Web.PictureBox pictureBox1;
 		private Wisej.Web.Button button3;
 	}
