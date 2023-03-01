@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
+using Wisej.Web;
 
 namespace RecipeDatabase
 {
@@ -68,5 +69,15 @@ namespace RecipeDatabase
 		}
         //updates a single value
         //add code here
+        public string FoodTransaction()
+        {
+			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
+			{
+				//we must use Query instead of Execute because we are returning a value
+                //Query returns an IEnumberable of type string. use .First() to get the first item (first string)
+				string output = connection.Query<string>("dbo.FoodTransaction").First();
+                return output;
+			}
+		}
     }
 }

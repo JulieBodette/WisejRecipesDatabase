@@ -114,5 +114,11 @@ namespace RecipeDatabase
 		{
             db.UpdateFoodGroupSingleValue("Pizza", "Main_Ingredients", "cheese");
 		}
+
+		private void button4_Click(object sender, System.EventArgs e)
+		{
+			//db.FoodTransaction() returns a string showing whether the transaction was successful
+			AlertBox.Show(db.FoodTransaction());
+		}
 	}
 }
