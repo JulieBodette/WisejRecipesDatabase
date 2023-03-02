@@ -80,5 +80,17 @@ namespace RecipeDatabase
 				return output;
 			}
 		}
+
+        public string GetPDFFilepathFromDatabase(string foodGroup)
+        {
+			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
+			{
+				//we must use Query instead of Execute because we are returning a value
+				//Query returns an IEnumberable of type string. use .First() to get the first item (first string)
+				string output = connection.Query<string>("dbo.GetPDFFilepathFromDatabase @FoodGroup", new { FoodGroup = foodGroup }).First();
+
+				return output;
+			}
+		}
     }
 }

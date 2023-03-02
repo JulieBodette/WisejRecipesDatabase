@@ -123,7 +123,11 @@ namespace RecipeDatabase
 
 		private void button5_Click(object sender, System.EventArgs e)
 		{
-            pdfViewer1.PdfSource = "C:\\Users\\julie\\Documents\\pdfrecipe\\BeefStewRecipe.pdf";
+            //send it the string
+            //use 'Soup' or 'Chicken'
+            pdfViewer1.PdfSource = db.GetPDFFilepathFromDatabase("Chicken");
+			//pdfViewer1.PdfSource = "C:\\Users\\julie\\Documents\\pdfrecipe\\BeefStewRecipe.pdf";
+			//pdfViewer1.PdfSource = "C:\\Users\\julie\\Documents\\pdfrecipe\\ParmesanChickenCasserole.pdf";
 		}
 	}
 }
