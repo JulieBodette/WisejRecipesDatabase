@@ -69,14 +69,15 @@ namespace RecipeDatabase
 		}
         //updates a single value
         //add code here
-        public string FoodTransaction()
+        public string FoodTransaction(string foodGroup, string ingredient, string wheneaten, string picturelink)
         {
 			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
 			{
 				//we must use Query instead of Execute because we are returning a value
                 //Query returns an IEnumberable of type string. use .First() to get the first item (first string)
-				string output = connection.Query<string>("dbo.FoodTransaction").First();
-                return output;
+				string output = connection.Query<string>("dbo.FoodTransaction @FoodGroup, @Ingredient, @WhenEaten,@PictureLink", new { FoodGroup = foodGroup, Ingredient = ingredient, WhenEaten = wheneaten, PictureLink= picturelink }).First();
+
+				return output;
 			}
 		}
     }

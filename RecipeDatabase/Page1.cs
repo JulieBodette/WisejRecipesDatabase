@@ -118,7 +118,7 @@ namespace RecipeDatabase
 		private void button4_Click(object sender, System.EventArgs e)
 		{
 			//db.FoodTransaction() returns a string showing whether the transaction was successful
-			AlertBox.Show(db.FoodTransaction());
+			AlertBox.Show(db.FoodTransaction("snacks", "salt", "anytime", "https://images.unsplash.com/photo-1579642761360-eabd1cca1e81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"));//string foodGroup, string ingredient, string wheneaten, string picturelink
 		}
 	}
 }
