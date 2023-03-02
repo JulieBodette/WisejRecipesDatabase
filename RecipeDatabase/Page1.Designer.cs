@@ -42,6 +42,8 @@
 			this.dataRepeaterLabel = new Wisej.Web.Label();
 			this.button3 = new Wisej.Web.Button();
 			this.button4 = new Wisej.Web.Button();
+			this.pdfViewer1 = new Wisej.Web.PdfViewer();
+			this.button5 = new Wisej.Web.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataRepeater1)).BeginInit();
@@ -178,17 +180,35 @@
 			// 
 			// button4
 			// 
-			this.button4.Location = new System.Drawing.Point(840, 415);
+			this.button4.Location = new System.Drawing.Point(852, 536);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(120, 51);
 			this.button4.TabIndex = 12;
 			this.button4.Text = "transaction";
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
+			// pdfViewer1
+			// 
+			this.pdfViewer1.Location = new System.Drawing.Point(365, 547);
+			this.pdfViewer1.Name = "pdfViewer1";
+			this.pdfViewer1.Size = new System.Drawing.Size(255, 205);
+			this.pdfViewer1.TabIndex = 13;
+			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(405, 488);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(165, 25);
+			this.button5.TabIndex = 14;
+			this.button5.Text = "load pdf from database";
+			this.button5.Click += new System.EventHandler(this.button5_Click);
+			// 
 			// Page1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
+			this.Controls.Add(this.button5);
+			this.Controls.Add(this.pdfViewer1);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.dataRepeater1);
@@ -202,7 +222,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "Page1";
-			this.Size = new System.Drawing.Size(1210, 334);
+			this.Size = new System.Drawing.Size(1046, 334);
 			this.Load += new System.EventHandler(this.Page1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -232,6 +252,8 @@
 		private Wisej.Web.PictureBox dataRepeaterPicturebox;
 		private Wisej.Web.Button button3;
 		private Wisej.Web.Button button4;
+		private Wisej.Web.PdfViewer pdfViewer1;
+		private Wisej.Web.Button button5;
 	}
 }
 
